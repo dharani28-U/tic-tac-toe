@@ -1,0 +1,135 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling with Color Changing Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Initial gradient */
+    background-size: 400% 400%; /* For color transition */
+    animation: gradientChange 10s ease infinite; /* Color-changing background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff; /* Text color for contrast */
+}
+
+/* Animation for the background gradient */
+@keyframes gradientChange {
+    0% {
+        background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    }
+    50% {
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    }
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Login Box Styling */
+.login-box {
+    width: 300px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form title */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    animation: textColorChange 5s ease infinite; /* Color-changing text */
+}
+
+/* Color-changing text animation */
+@keyframes textColorChange {
+    0% {
+        color: #ff7e5f;
+    }
+    50% {
+        color: #2575fc;
+    }
+    100% {
+        color: #ff7e5f;
+    }
+}
+
+/* Input Box Styling */
+.textbox {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Animation for Input Fields (Color Changing) */
+.textbox input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 10px rgba(37, 117, 252, 0.5);
+    background-color: rgba(37, 117, 252, 0.1); /* Light blue background on focus */
+}
+
+/* Submit Button Styling */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #2575fc;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background: #6a11cb;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Button Active Animation */
+.btn:active {
+    transform: scale(1);
+}
